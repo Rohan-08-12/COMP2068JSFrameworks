@@ -64,7 +64,7 @@ app.use('/', (req, res) => {
   res.end(
     'LAB03 Node.js Simple Calculator\n' +
       'Use this format:\n' +
-      '/lab2?method=add|subtract|multiply|divide&x=16&y=4\n' +
+      '/lab3?method=add|subtract|multiply|divide&x=16&y=4\n' +
       'Examples:\n' +
       '/lab2?method=add&x=16&y=4\n' +
       '/lab2?method=subtract&x=16&y=4\n' +
