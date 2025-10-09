@@ -1,13 +1,11 @@
-// LAB03 Node.js Simple Calculator using Connect
-// Name: Rohan Rohan
 
 const connect = require('connect');
 const http = require('http');
 const app = connect();
 
-// Handle /lab2 route
+//  /lab3 route
 app.use('/lab3', (req, res) => {
-  // Parse the full URL to access query parameters
+
   const url = new URL(req.url, `http://${req.headers.host}`);
 
   // Extract query params
@@ -59,7 +57,7 @@ app.use('/lab3', (req, res) => {
   res.end(`${x} ${symbol} ${y} = ${result}`);
 });
 
-// Optional: Root route for help
+// Default route
 app.use('/', (req, res) => {
   res.end(
     'LAB03 Node.js Simple Calculator\n' +
