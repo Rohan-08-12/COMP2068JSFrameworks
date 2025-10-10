@@ -1,0 +1,183 @@
+/* Example (keep first): Reset default margins for all elements to 0 */
+* {
+  margin: 0;
+}
+
+/* Q1: Ensure HTML5 semantic elements behave as block-level (older browsers) */
+header, nav, section, article, aside, footer, main, figure, figcaption {
+  display: block;
+}
+
+/* Q2: BODY — text color, background image (only one kept), sans-serif stack, zero margins */
+body {
+  /* 2a: Text color (use HEX/RGB/HSL—no named colors) */
+  color: #e6e6e6;
+
+  /* 2b: Background image — choose ONE dark-woodX.jpg and delete the rest */
+  background-image: url("../assets/images/dark-wood2.jpg");
+  background-repeat: repeat;         /* wood texture usually tiles */
+  background-attachment: fixed;      /* optional subtle parallax feel */
+  background-size: auto;
+
+  /* 2c: Font family — 3+ sans-serif fallbacks */
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+
+  /* 2d: Zero margins on body */
+  margin: 0;
+}
+
+/* Q3: .container — fixed width, vertical spacing, centered, background */
+.container {
+  /* 3a: Lab’s suggested fixed width (you could use max-width instead) */
+  width: 950px;
+
+  /* 3b + 3c: 5px top/bottom; center horizontally via auto left/right */
+  margin: 5px auto;
+
+  /* 3d: Background color behind content (on top of wood) */
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+/* Q4: .content — readable line-height and comfortable padding */
+.content {
+  /* 4a: Line height for paragraph readability */
+  line-height: 1.4em;
+
+  /* 4b: Padding around content */
+  padding: 10px;
+}
+
+/* Q5: Header, Nav, Footer — shared background + foreground (text) colors */
+header, nav, footer {
+  background-color: rgba(20, 20, 20, 0.9);
+  color: #f0f0f0;
+}
+
+/* Q6: Only UL that is a direct child of NAV — remove default margin, add padding */
+nav > ul {
+  margin: 0;
+  padding: 5px;
+}
+
+/* Q7: NAV list items — horizontal layout, spacing, uppercase labels */
+nav li {
+  display: inline-block;       /* horizontal instead of vertical */
+  margin-right: 40px;          /* space between items */
+  text-transform: uppercase;   /* all caps */
+}
+
+/* Q8: NAV link states — :link, :visited, :hover, :active use your theme colors */
+nav a:link {
+  color: #b3c7ff;              /* default link color */
+}
+nav a:visited {
+  color: #99a6cc;              /* visited link color */
+}
+nav a:hover {
+  color: #ffffff;              /* hover state */
+}
+nav a:active {
+  color: #ffd580;              /* active (pressed) state */
+}
+
+/* Q9: Any <a> — site-wide link styling: color + no underline */
+a {
+  color: #a0d4ff;
+  text-decoration: none;
+}
+
+/* Q10: h1/h2/h3 — margin, uppercase, distinct heading color */
+h1, h2, h3 {
+  margin: 10px;
+  text-transform: uppercase;
+  color: #ffe28c;
+}
+
+/* Q11: .img-centre — center an image; add margin + padding
+   NOTE: add class="img-centre" to ONE img in index.html */
+.img-centre {
+  display: block;      /* images are inline by default */
+  margin: 5px auto;    /* centers horizontally */
+  padding: 2px;
+}
+
+/* Q12: audio & video — center horizontally with vertical spacing
+   (make block so margin:auto works) */
+audio, video {
+  display: block;
+  margin: 10px auto;
+}
+
+/* Q13: Any table — fixed width, centered, collapsed borders */
+table {
+  width: 800px;
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+
+/* Q14: td & th — subtle borders, compact padding, light background */
+td, th {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 2px 5px;                 /* 2px top/bottom, 5px left/right */
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Q15: th and tfoot td — uppercase headers/footers with distinct colors */
+th,
+tfoot td {
+  text-transform: uppercase;
+  background-color: rgba(255, 226, 140, 0.2);
+  color: #fff3d4;
+}
+
+/* Q16: dt — emphasize term names with bold */
+dt {
+  font-weight: bold;
+}
+
+/* Q17: footer — smaller text, centered, thin vertical padding */
+footer {
+  font-size: 80%;
+  text-align: center;
+  padding: 1px 0;
+}
+
+/* Q18: iframe — vertical margin and centered horizontally (block) */
+iframe {
+  display: block;
+  margin: 10px auto;
+}
+
+/* Q19: fieldset — fixed width, centered with top/bottom margin, border, bg */
+fieldset {
+  width: 500px;
+  margin: 20px auto;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Q20: legend — italic, contrasting fg/bg, compact spacing, rounded border */
+legend {
+  font-style: italic;
+  color: #1a1a1a;
+  background-color: #ffd580;
+  margin: 0 10px;         /* 0 top/bottom; 10px left/right */
+  padding: 0 5px;         /* 0 top/bottom; 5px left/right */
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Q21: submit button — border, padding, background, text color */
+input[type="submit"] {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 5px;
+  background-color: #4da3ff;
+  color: #0a0a0a;
+}
+
+/* Q22: submit button (hover) — swap colors + hand cursor */
+input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #0a0a0a;
+  cursor: pointer;
+}
