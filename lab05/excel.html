@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Excel • JS Forms & Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="theme-light">
+    <header class="site-header">
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="excel.html" aria-current="page">Excel</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <h1>Excel Functions</h1>
+
+      <form id="excel-form" novalidate>
+        <div class="field full">
+          <label for="numbers">Enter your numbers (separated by spaces)</label>
+          <input
+            id="numbers"
+            name="numbers"
+            type="text"
+            placeholder="e.g., 23 67 98 90 56"
+          />
+        </div>
+
+        <fieldset class="fieldset">
+          <legend>Choose a function</legend>
+          <label class="radio">
+            <input type="radio" name="excel" id="sum" value="sum" checked />
+            <span>AutoSum</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="excel" id="avg" value="avg" />
+            <span>Average</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="excel" id="max" value="max" />
+            <span>Max</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="excel" id="min" value="min" />
+            <span>Min</span>
+          </label>
+        </fieldset>
+
+        <div class="actions">
+          <button id="excel-calc" type="button" class="btn primary">
+            Calculate
+          </button>
+          <button type="reset" class="btn">Clear</button>
+        </div>
+      </form>
+
+      <div id="output" class="output"></div>
+
+      <div class="themes">
+        <button id="themeLight" class="btn">Light</button>
+        <button id="themeDark" class="btn">Dark</button>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>ILAC &amp; EFREI - HTML, CSS, and JavaScript Assignment</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
