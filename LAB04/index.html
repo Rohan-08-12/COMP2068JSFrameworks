@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Basic Geometry — Lab 5</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <h1 id="top">Basic Geometry</h1>
+        <p class="subtitle">
+          Calculate areas of common shapes using JavaScript & the DOM
+        </p>
+        <nav class="top-nav">
+          <ul class="nav-list">
+            <li><a href="#circle">Circle</a></li>
+            <li><a href="#triangle">Triangle</a></li>
+            <li><a href="#square">Square</a></li>
+            <li><a href="#rectangle">Rectangle</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section id="circle" class="card">
+        <div class="card-head">
+          <h2>Circle</h2>
+          <p class="hint">Area = π × r²</p>
+        </div>
+        <div class="grid">
+          <div class="field">
+            <label for="circle-radius">Radius</label>
+            <input type="number" id="circle-radius" placeholder="e.g., 5" />
+          </div>
+          <div class="actions">
+            <button id="btn-circle" class="btn primary">Calculate</button>
+          </div>
+          <div class="field">
+            <label>Area</label>
+            <input type="text" id="circle-area" readonly />
+          </div>
+        </div>
+        <a href="#top" class="back-top">Back to Top</a>
+      </section>
+
+      <section id="triangle" class="card">
+        <div class="card-head">
+          <h2>Triangle</h2>
+          <p class="hint">Area = ½ × b × h</p>
+        </div>
+        <div class="grid">
+          <div class="field">
+            <label for="triangle-base">Base</label>
+            <input type="number" id="triangle-base" placeholder="e.g., 8" />
+          </div>
+          <div class="field">
+            <label for="triangle-height">Height</label>
+            <input type="number" id="triangle-height" placeholder="e.g., 6" />
+          </div>
+          <div class="actions">
+            <button id="btn-triangle" class="btn primary">Calculate</button>
+          </div>
+          <div class="field">
+            <label>Area</label>
+            <input type="text" id="triangle-area" readonly />
+          </div>
+        </div>
+        <a href="#top" class="back-top">Back to Top</a>
+      </section>
+
+      <section id="square" class="card">
+        <div class="card-head">
+          <h2>Square</h2>
+          <p class="hint">Area = a²</p>
+        </div>
+        <div class="grid">
+          <div class="field">
+            <label for="square-side">Side</label>
+            <input type="number" id="square-side" placeholder="e.g., 4" />
+          </div>
+          <div class="actions">
+            <button id="btn-square" class="btn primary">Calculate</button>
+          </div>
+          <div class="field">
+            <label>Area</label>
+            <input type="text" id="square-area" readonly />
+          </div>
+        </div>
+        <a href="#top" class="back-top">Back to Top</a>
+      </section>
+
+      <section id="rectangle" class="card">
+        <div class="card-head">
+          <h2>Rectangle</h2>
+          <p class="hint">Area = w × h</p>
+        </div>
+        <div class="grid">
+          <div class="field">
+            <label for="rect-width">Width</label>
+            <input type="number" id="rect-width" placeholder="e.g., 10" />
+          </div>
+          <div class="field">
+            <label for="rect-height">Height</label>
+            <input type="number" id="rect-height" placeholder="e.g., 3" />
+          </div>
+          <div class="actions">
+            <button id="btn-rectangle" class="btn primary">Calculate</button>
+          </div>
+          <div class="field">
+            <label>Area</label>
+            <input type="text" id="rect-area" readonly />
+          </div>
+        </div>
+        <a href="#top" class="back-top">Back to Top</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Lab 5 — DOM & Events</p>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
